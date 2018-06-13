@@ -6,20 +6,20 @@ using std::cout;
 using std::cin;
 using std::endl;
 using std::map;
+using std::pair;
 
 int main()
 {
     unsigned int n;
     cin >> n;
 
-    map<float, float> lineSegments;
+    map<float, float> lineSegment;
 
     for(unsigned int i = 0; i < n; i++)
     {
-        map<float, float> line;
-        cin >> line.key_comp() > line.value_comp();
-
-        lineSegments.insert(line);
+        pair<float, float> line;
+        cin >> line.first >> line.second;
+        lineSegment.insert(line);
     }
 
     cout << n;
