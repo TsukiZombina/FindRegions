@@ -1,26 +1,25 @@
 #include <iostream>
-#include <set>
+#include <map>
 #include <utility>
 
 using std::cout;
 using std::cin;
 using std::endl;
-using std::set;
-using std::pair;
+using std::map;
 
 int main()
 {
-    int n;
-    scanf("%d", &n);
+    unsigned int n;
+    cin >> n;
 
-    set<pair<float, float>> lines;
+    map<float, float> lineSegments;
 
     for(unsigned int i = 0; i < n; i++)
     {
-        pair<float, float> line;
-        cin >> line.first >> line.second;
+        map<float, float> line;
+        cin >> line.key_comp() > line.value_comp();
 
-        lines.insert(line);
+        lineSegments.insert(line);
     }
 
     cout << n;
